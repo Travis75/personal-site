@@ -29,7 +29,9 @@ a {
 #portfolio{
   display: inline-block;
 }
+
 h4 {
+  margin-bottom: 0;
   display: inline-block;
 }
 
