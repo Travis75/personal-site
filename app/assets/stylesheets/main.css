@@ -18,7 +18,6 @@ a {
 
 #nav {
   padding-left: 36.5%;
-  text-align: center;
   display: inline-block;
 }
 
@@ -29,6 +28,22 @@ a {
 h4 {
   margin-bottom: 0;
   display: inline-block;
+}
+
+.outside_links {
+  float: right;
+  display: inline-block;
+}
+
+.outside_links img {
+  padding-top: 15%;
+  display: inline-block;
+  max-height: 30%;
+  max-width: 30%;
+}
+
+#git_link img{
+  float: right;
 }
 
 .slider {
