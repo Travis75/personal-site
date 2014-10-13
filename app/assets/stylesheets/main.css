@@ -13,11 +13,13 @@ a {
 }
 
 #title {
+  font-family: 'Quicksand', sans-serif;
   display: inline-block;
 }
 
 #nav {
-  padding-left: 36.5%;
+  padding-left: 35%;
+  text-align:center;
   display: inline-block;
 }
 
@@ -26,6 +28,7 @@ a {
 }
 
 h4 {
+  font-family: 'Quicksand', sans-serif;
   margin-bottom: 0;
   display: inline-block;
 }
@@ -36,14 +39,11 @@ h4 {
 }
 
 .outside_links img {
-  padding-top: 15%;
-  display: inline-block;
-  max-height: 30%;
-  max-width: 30%;
-}
-
-#git_link img{
   float: right;
+  padding-top: 7%;
+  display: inline-block;
+  max-height: 20%;
+  max-width: 20%;
 }
 
 .slider {
@@ -53,6 +53,11 @@ h4 {
   text-align:center;
 }
 
+.slider div img{
+  zoom: 2;
+  max-height: 100%;
+  max-width: 100%;
+}
 .slick-prev:before, .slick-next:before {
     color:gray !important;
 }

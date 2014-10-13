@@ -1,6 +1,6 @@
 <% Article.all.each do |article| %>
   <div>
-    <h5> <%= article.title %></h5>
+    <a href = "/articles/<%=article.id%>"><h5> <%= article.title %></h5></a>
     <p> <%= article.content %> </p>
   </div>
 <% end %>
