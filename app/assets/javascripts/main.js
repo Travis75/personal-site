@@ -1,9 +1,12 @@
 $(document).ready(function(){
-
-  $('.slider').slick({
-    slidesToScroll: 1,
-    autoplay: true,
-  })
+  // $('.slider').slick({
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  // })
+  $(".owl-carousel").owlCarousel({
+    singleItem: true,
+    autoPlay: 5000
+  });
 
   $(".blog_portfolio").hover(
     function(){$(this).css('border-bottom', '2px solid black')},
