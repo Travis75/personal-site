@@ -46,6 +46,22 @@ h4 {
   display: inline-block;
 }
 
+#about {
+  float: left;
+  font-family: 'Quicksand', sans-serif;
+  /*border: 2px solid black;
+  border-radius: 5%;*/
+  width: 22%;
+  /*background-color: #DCDCDC;*/
+}
+
+#about h3 {
+  text-align: center;
+}
+
+#about p {
+  margin-left: 5%;
+}
 
 .owl-carousel {
   margin-top: 2%;
