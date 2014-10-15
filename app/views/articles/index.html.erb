@@ -1,6 +1,13 @@
-<% Article.all.each do |article| %>
-  <div>
-    <a href = "/articles/<%=article.id%>"><h5> <%= article.title %></h5></a>
-    <p> <%= article.content %> </p>
-  </div>
-<% end %>
+<ul class="img-list">
+  <% Article.all.each do |article| %>
+    <li>
+      <a href = "/articles/<%=article.id%>">
+        <img src = "/assets/<%=article.image_name%>"/>
+          <span class="text-content">
+              <span><%= article.title %></span>
+          </span>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
