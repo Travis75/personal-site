@@ -1,17 +1,4 @@
 $(document).ready(function(){
-  // $('.slider').slick({
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  // })
-  $(".owl-carousel").owlCarousel({
-    singleItem: true,
-    autoPlay: 5000
-  });
-
-  $(".blog_portfolio").hover(
-    function(){$(this).css('border-bottom', '2px solid black')},
-    function(){$(this).css('border-bottom', '')}
-  )
 
   $('.blog_portfolio').on('click', function(e){
     e.preventDefault();
@@ -25,7 +12,7 @@ $(document).ready(function(){
           $('#body').empty()
           $('#body').append(data)
         })
-        $(topBar).animate({"padding-bottom": "0%"}, 2000)
+        $(topBar).animate({"padding-bottom": "2%"}, 2000)
       })
   })
 
