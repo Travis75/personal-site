@@ -1,0 +1,34 @@
+#projects {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+#projects a h1{
+  color: white;
+}
+
+#fit-friends {
+  background:
+    linear-gradient(
+      rgba(255, 0, 0, 0.45),
+      rgba(255, 0, 0, 0.45)
+    ),
+  url("/assets/Fit_Friends.png");
+
+  border: 2px solid black;
+}
+
+#haiku-generator {
+  background:
+    linear-gradient(
+      rgba(255, 0, 0, 0.45),
+      rgba(255, 0, 0, 0.45)
+    ),
+  url("/assets/Haiku.png");
+  border: 2px solid black;
+  margin-top: 1%;
+}
+
+#projects h1:hover {
+  color: black;
+};

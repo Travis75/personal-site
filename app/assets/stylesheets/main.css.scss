@@ -1,5 +1,5 @@
 body {
-  background-color: #54504d;
+  background-image: url('/assets/tree_bark.png');
   margin:0 auto;
 }
 
@@ -65,224 +65,74 @@ a {
   display: inline-block;
 }
 
-/*
-.owl-carousel {
-  margin-top: 2%;
-  margin-left: 25%;
-  max-width: 50%;
-  max-height: 50%;
-  /*text-align:center;
-}*/
-/*
-.owl-carousel div img{
-  zoom: 2;
-  max-height: 100%;
-  max-width: 100%;
-  box-shadow: 5px 5px 2px #888888;
-  border-radius: 5%;
-}*/
-
 #body {
   margin-top: 2%;
-  width: 50%;
-  margin-left: 25%;
+  width: 66%;
+  margin-left: 17%;
+  overflow: auto;
+  text-align: center
 }
 
-
-@font-face {
-    font-family: 'ecoico';
-    src:url('../fonts/timelineicons/ecoico.eot');
-    src:url('../fonts/timelineicons/ecoico.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/timelineicons/ecoico.woff') format('woff'),
-        url('../fonts/timelineicons/ecoico.ttf') format('truetype'),
-        url('../fonts/timelineicons/ecoico.svg#ecoico') format('svg');
-    font-weight: normal;
-    font-style: normal;
-} /* Made with http://icomoon.io/ */
-
-.cbp_tmtimeline {
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-    position: relative;
-}
-
-time.cbp_tmtime span{
+/* entire container, keeps perspective */
+.flip-container {
   float:left;
-  position:absolute;
+  margin-left: 1%;
+  margin-top: 1%;
+  perspective: 1000;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+ /* max-width: 200px;
+  max-height: 200px;*/
+  width: 200px;
+  height: 200px;
 }
 
-/* The line */
-.cbp_tmtimeline:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 10px;
-    background: #afdcf8;
-    left: 20%;
-    margin-left: -10px;
+.front img {
+  width: 200px;
+  height: 200px;
 }
 
-.cbp_tmtimeline > li {
-    position: relative;
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
 }
 
-/* The date/time */
-.cbp_tmtimeline > li .cbp_tmtime {
-    display: block;
-    width: 25%;
-    padding-right: 100px;
-    position: absolute;
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  font-family: 'Quicksand', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.cbp_tmtimeline > li .cbp_tmtime span {
-    display: block;
-    text-align: right;
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
 }
 
-.cbp_tmtimeline > li .cbp_tmtime span:first-child {
-    font-size: 0.9em;
-    color: #bdd0db;
+/* back, initially hidden pane */
+.back {
+  background: #f8f8f8;
+  transform: rotateY(180deg);
 }
 
-.cbp_tmtimeline > li .cbp_tmtime span:last-child {
-    font-size: 2.5em;
-    color: #3594cb;
+.back {
+  text-align: center;
 }
 
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
-    color: #6cbfee;
+.back a {
+  text-decoration: underline;
 }
 
-/* Right content */
-.cbp_tmtimeline > li .cbp_tmlabel {
-    margin: 0 0 15px 25%;
-    background: #3594cb;
-    color: #fff;
-    padding: 2em;
-    font-size: 1.2em;
-    font-weight: 300;
-    line-height: 1.4;
-    position: relative;
-    border-radius: 5px;
-}
 
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
-    background: #6cbfee;
-}
-
-.cbp_tmtimeline > li .cbp_tmlabel h2 {
-    margin-top: 0px;
-    padding: 0 0 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.4);
-}
-
-/* The triangle */
-.cbp_tmtimeline > li .cbp_tmlabel:after {
-    right: 100%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-right-color: #3594cb;
-    border-width: 10px;
-    top: 10px;
-}
-
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
-    border-right-color: #6cbfee;
-}
-
-/* The icons */
-.cbp_tmtimeline > li .cbp_tmicon {
-    width: 40px;
-    height: 40px;
-    font-family: 'ecoico';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    font-size: 1.4em;
-    line-height: 40px;
-    -webkit-font-smoothing: antialiased;
-    position: absolute;
-    color: #fff;
-    background: #46a4da;
-    border-radius: 50%;
-    box-shadow: 0 0 0 8px #afdcf8;
-    text-align: center;
-    left: 20%;
-    top: 0;
-    margin: 0 0 0 -25px;
-}
-
-.cbp_tmicon-phone:before {
-    content: "\e000";
-}
-
-.cbp_tmicon-screen:before {
-    content: "\e001";
-}
-
-.cbp_tmicon-mail:before {
-    content: "\e002";
-}
-
-.cbp_tmicon-earth:before {
-    content: "\e003";
-}
-
-/* Example Media Queries */
-@media screen and (max-width: 65.375em) {
-
-    .cbp_tmtimeline > li .cbp_tmtime span:last-child {
-        font-size: 1.5em;
-    }
-}
-
-@media screen and (max-width: 47.2em) {
-    .cbp_tmtimeline:before {
-        display: none;
-    }
-
-    .cbp_tmtimeline > li .cbp_tmtime {
-        width: 100%;
-        position: relative;
-        padding: 0 0 20px 0;
-    }
-
-    .cbp_tmtimeline > li .cbp_tmtime span {
-        text-align: left;
-    }
-
-    .cbp_tmtimeline > li .cbp_tmlabel {
-        margin: 0 0 30px 0;
-        padding: 1em;
-        font-weight: 400;
-        font-size: 95%;
-    }
-
-    .cbp_tmtimeline > li .cbp_tmlabel:after {
-        right: auto;
-        left: 20px;
-        border-right-color: transparent;
-        border-bottom-color: #3594cb;
-        top: -20px;
-    }
-
-    .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
-        border-right-color: transparent;
-        border-bottom-color: #6cbfee;
-    }
-
-    .cbp_tmtimeline > li .cbp_tmicon {
-        position: relative;
-        float: right;
-        left: auto;
-        margin: -55px 5px 0 0px;
-    }
-}
