@@ -13,8 +13,7 @@
       rgba(255, 0, 0, 0.45),
       rgba(255, 0, 0, 0.45)
     ),
-  url("/assets/Fit_Friends.png");
-
+  image-url("Fit_Friends.png");
   border: 2px solid black;
 }
 
@@ -24,7 +23,7 @@
       rgba(255, 0, 0, 0.45),
       rgba(255, 0, 0, 0.45)
     ),
-  url("/assets/Haiku.png");
+  image-url("Haiku.png");
   border: 2px solid black;
   margin-top: 1%;
 }
