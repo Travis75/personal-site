@@ -33,7 +33,13 @@ function AddHandlerToBlogs(html){
         $("#body").empty()
         $("#body").css("display", "none")
         $("#body").append(data).fadeIn(1000)
-        // $("#content").append(markdownParser.parse($("#content").text()))
+        addMarkdownText()
       })
     })
+}
+
+function addMarkdownText(){
+  var new_text = markdownParser.parse($("#content").text())
+  $("#content").empty()
+  $("#content").append(new_text)
 }
