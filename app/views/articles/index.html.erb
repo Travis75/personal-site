@@ -2,7 +2,7 @@
   <% Article.all.each do |article| %>
     <li>
       <a href = "/articles/<%=article.id%>">
-        <img src = "/assets/<%=article.image_name%>"/>
+        <img src = "<%=article.image_link%>"/>
           <span class="text-content">
               <span><%= article.title %></span>
           </span>

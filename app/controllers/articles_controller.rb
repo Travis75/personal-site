@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
 
   def index
-    # articles = Article.all
     render layout: false
   end
 
   def show
+    @article = Article.find(params[:id])
+    render layout: false
   end
 
 end

@@ -11,9 +11,23 @@ $(document).ready(function(){
         }).done(function(data){
           $('#body').empty()
           $('#body').append(data)
+          AddHandlerToBlogs(data)
         })
         $(topBar).animate({"padding-bottom": "2%"}, 2000)
       })
   })
 
 })
+
+function AddHandlerToBlogs(html){
+    $('li').on('click', function(e){
+      e.preventDefault()
+      $.ajax({
+        type: "GET",
+        url: this.children[0].href
+      }).done(function(data){
+        $("#body").empty()
+        $("#body").append(data)
+      })
+    })
+}
