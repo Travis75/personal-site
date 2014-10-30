@@ -16,8 +16,8 @@ $(document).ready(function(){
           $('#body').empty()
           $('#body').append(data)
           AddHandlerToBlogs(data)
+          $(topBar).animate({"padding-bottom": "2%"}, 2000)
         })
-        $(topBar).animate({"padding-bottom": "2%"}, 2000)
       })
   })
 
