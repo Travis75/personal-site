@@ -1,3 +1,5 @@
-<h1><%= @article.title %></h1>
-<img src = "<%=@article.image_link%>"/>
-<p> <%= @article.content %>  </p>
+<div id = "blog_holder">
+  <h1><%= @article.title %></h1>
+  <img src = "<%=@article.image_link%>"/>
+  <div id = "content"> <%= @article.content %>  </div>
+</div>

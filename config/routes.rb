@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get '/main' => 'welcome#main'
   get '/projects' => 'welcome#projects'
 
-  resources :articles, only: [:index, :show]
+  resources :articles, only: [:index, :show, :new, :create]
 end

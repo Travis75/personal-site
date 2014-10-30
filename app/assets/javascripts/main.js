@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+  $(window).load(function(){
+    $('#body').fadeIn(1000);
+  })
+
   $('.blog_portfolio').on('click', function(e){
     e.preventDefault();
     var whereTo = $(this).children()[0].href
@@ -27,7 +31,9 @@ function AddHandlerToBlogs(html){
         url: this.children[0].href
       }).done(function(data){
         $("#body").empty()
-        $("#body").append(data)
+        $("#body").css("display", "none")
+        $("#body").append(data).fadeIn(1000)
+        // $("#content").append(markdownParser.parse($("#content").text()))
       })
     })
 }
