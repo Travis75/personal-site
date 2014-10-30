@@ -2,3 +2,7 @@
   font-family: 'Quicksand', sans-serif;
   margin-top: 0 ;
 }
+
+#content {
+  text-align: left !important;
+}

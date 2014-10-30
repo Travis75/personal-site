@@ -68,7 +68,7 @@ a {
 #body {
   margin-top: 2%;
   width: 66%;
-  margin-left: 17%;
+  margin-left: 18%;
   overflow: auto;
   text-align: center
 }
@@ -76,8 +76,8 @@ a {
 /* entire container, keeps perspective */
 .flip-container {
   float:left;
-  margin-left: 1%;
-  margin-top: 1%;
+  /*margin-left: 1%;*/
+  /*margin-top: 1%;*/
   perspective: 1000;
 }
   /* flip the pane when hovered */

@@ -14,8 +14,12 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    Article.create(article_params)
-    redirect_to "/"
+    if ENV["BLOG_CODE"] == params["Code"]
+      Article.create(article_params)
+      redirect_to "/"
+    else
+      redirect_to "/"
+    end
   end
 
   private
