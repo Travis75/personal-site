@@ -70,12 +70,15 @@ a {
   width: 66%;
   margin-left: 18%;
   overflow: auto;
-  text-align: center
+  text-align: center;
 }
 
 /* entire container, keeps perspective */
 .flip-container {
-  float:left;
+  /*float:left;*/
+  margin-left: -4px;
+  margin-top: -4px;
+  display: inline-block;
   /*margin-left: 1%;*/
   /*margin-top: 1%;*/
   perspective: 1000;
