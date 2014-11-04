@@ -1,9 +1,6 @@
 $(document).ready(function(){
-
+  updateMobile();
   $(window).load(function(){
-    if ($(window).width() >= 400) {
-      $('h3').attr
-    }
     $('#body').fadeIn(1000);
   })
 
@@ -45,4 +42,11 @@ function addMarkdownText(){
   var new_text = markdownParser.parse($("#content").text())
   $("#content").empty()
   $("#content").append(new_text)
+}
+
+function updateMobile(){
+  if ($(window).width() >= 400) {
+    $('h3').text("{TG}")
+    $('#top_bar').css("text-align", "left")
+  }
 }
