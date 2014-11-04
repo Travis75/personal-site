@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
   $(window).load(function(){
+    if ($(window).width() >= 400) {
+      $('h3').attr
+    }
     $('#body').fadeIn(1000);
   })
 
