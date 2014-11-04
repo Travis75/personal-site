@@ -45,7 +45,7 @@ function addMarkdownText(){
 }
 
 function updateMobile(){
-  if ($(window).width() >= 400) {
+  if ($(window).width() <= 400) {
     $('h3').text("{TG}")
     $('#top_bar').css("text-align", "left")
   }
