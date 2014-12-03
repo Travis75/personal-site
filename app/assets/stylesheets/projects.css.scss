@@ -30,6 +30,17 @@
   margin-top: 1%;
 }
 
+#health-dashboard {
+  background:
+    linear-gradient(
+      rgba(255, 0, 0, 0.45),
+      rgba(255, 0, 0, 0.45)
+    ),
+  image-url("Healthcare-App.png");
+  border: 2px solid black;
+  margin-top: 1%;
+}
+
 #projects h1:hover {
   color: black;
 };
